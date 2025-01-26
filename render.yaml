@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: express-api
+    env: node
+    branch: main  # Replace 'main' with your branch name
+    buildCommand: pnpm install
+    startCommand: pnpm start
+    autoDeploy: true
+    
