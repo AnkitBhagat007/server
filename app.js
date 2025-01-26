@@ -66,6 +66,8 @@ app.use(express.urlencoded({ extended: true, limit: '1mb' }))
 // Static Files
 app.use(express.static('public'))
 
+app.get('/', (req, res) => res.json({'message': 'I work'}))
+
 // API Routes
 app.use('/auth', authRouter)
 app.use('/oauth', oauthRouter)
