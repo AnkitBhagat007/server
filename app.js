@@ -51,7 +51,7 @@ const helmetConfig = helmet({
 })
 
 // Middleware
-app.use(cors(corsOptions))
+app.use(cors('*))
 app.use(helmetConfig)
 app.use(mongoSanitize())
 app.use(morgan('dev'))
