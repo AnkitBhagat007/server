@@ -21,6 +21,7 @@ const {
 } = require('../controllers/api.controller')
 
 //user-related fetch routes
+router.route('/user').get((req, res) => res.json({ message: 'Welcome to the API' }))
 router.route('/user/me').get(isAuthenticated, getUserID, getUserByID)
 router.route('/user/:id').get(isAuthenticated, isAdmin, getUserByID)
 router.route('/download/notesheet/:pdf').get(downloadPDF)
