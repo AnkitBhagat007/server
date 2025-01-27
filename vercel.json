@@ -3,11 +3,6 @@
   "builds": [
     { "src": "server.js", "use": "@vercel/node" }
   ],
-  "functions": {
-    "server.js": {
-      "timeout": 30
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
