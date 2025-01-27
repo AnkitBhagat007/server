@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000
 const server = http.createServer(app)
 unhandledRejection(server)
 
-cron.schedule('30 0 * * *', rejectExpiredNotesheet)
+// cron.schedule('30 0 * * *', rejectExpiredNotesheet)
 
 server.listen(port, async () => {
 	await connectDB()
